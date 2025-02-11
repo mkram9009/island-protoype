@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/main.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script href="assets/scripts/search.js" rel="javascript"> 
+    function openSearch() {
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function closeSearch() {
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+  <script href="assets/scripts/booking.js" rel="javascript">
+  	function openBooking() {
+      document.getElementById("bookingOverlay").style.display = "block";
+    }
+
+    function closeBooking() {
+      document.getElementById("bookingOverlay").style.display = "none";
+    }
+	</script>  
+  
+<style>
+</style>
+</head>
+
+<body class="bg-image">
+<div class="body-wrapper">
+<div class="nav-main-wrapper">
+
+<div class="nav-wrapper">
+<ul class="tool-nav">
+  
+  <li class="home-tool ">
+    <div>
+	  <button class="search-icon" type="submit" onclick="openSearch()"><i title="Search Button Icon" class="fa fa-search" style="font-size:20px"></i>
+	  </button>
+	  <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+          <form class="form-content" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+	    </div>
+	  </div>
+	</div>
+  </li>
+
+  <li class="plane-tool plane-icon">
+    <div>
+	  <a>
+	    <i class="fa fa-plane" style="font-size:24px"></i>
+	  </a>
+	</div>
+  </li>
+  
+  <li class="map-tool map-icon">
+    <div>
+	  <a>
+	  <i class="fa fa-map-o" style="font-size:18px"></i>
+	  </a>
+	</div>
+  </li>
+  
+  <li class="home-tool">
+    <div>
+	  <a class="home-icon" href="index.html">
+	  <i class="fa fa-home" style="font-size:26px"></i>
+	  </a>
+	</div>
+  </li>
+  
+</ul>
+
+<header class="header-nav">
+  <div class="header-container">
+    <div class="logo-container">
+	  <a href="index.html">
+	    <img class ="img-active" src="assets/images/taniti-logo2.png" title="Taniti Island Logo">
+	  </a>
+	</div>
+	<nav class="main-nav-items">
+	  <div class="top-nav">
+	      <a class="nav-item active" href="stay.html">Stay</a>
+	      <a class="nav-item nav-hover" href="travel.html">Travel</a>
+	      <a class="nav-item nav-hover" href="eat.html">Eat</a>
+	      <a class="nav-item nav-hover" href="relax.html">Relax</a>
+	      <a class="nav-item nav-hover" href="about.html">About</a>
+		  <a class="nav-item nav-hover " href="faq.html">Faq</a>
+	  </div>
+	</nav>
+  </div>
+</header>
+</div>
+
+<div class="book-container">
+  <button class="bookNowBtn" type="submit" onclick="openBooking()">
+    Book Now
+  </button>
+  
+  <div id="bookingOverlay" class="bookingOverlay">
+    <span class="closebtn" onclick="closeBooking()" title="Close Overlay">x</span>
+      <div class="bookingOverlay-content">
+
+  <form id="booking-form">
+    <h2>Taniti Lodging Form</h2>
+	
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+	
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+	  <label for="email">Confirm Email:</label>
+      <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+	  <label for="phone">Confirm Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+	  
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" name="guests" min="1" required>
+
+    <label for="room-type">Lodging Type:</label>
+    <select id="room-type" name="lodging-type" required>
+      <option value="" selected>Select Your Lodging</option>
+      <option value="resort">Four-Star Resort</option>
+      <option value="hostel">Hostel</option>
+      <option value="hotel">Hotel</option>
+	  <option value="b-n-b">Bread & Breakfast</option>
+    </select>
+
+	 <label for="arrival-date">Arrival Date:</label>
+    <input type="date" id="arrival-date" name="arrival-date" required>
+
+    <label for="departure-date">Departure Date:</label>
+    <input type="date" id="departure-date" name="departure-date" required>
+
+    <button type="submit">Book Now</button>
+  </form>
+  
+  </div>
+  </div>
+</div>
+
+<div class="article-wrapper">
+  <main class="main-content">
+    <div class="article-container">
+	  <article class="article-items" >
+        <div class="card">
+	      <h2 class="h2-item" >Resort Lodging</h2>
+		    <p class="card-item">Taniti has a wide variety of lodging that ranges from an inexpensive 
+			<a class="highlight">hostel</a>
+			to one large, 
+			<a class="highlight">four-star resort</a>.
+			</p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card">
+          <h2 class="h2-item">Local Lodging</h2>
+		    <p class="card-item" >There are many small, 
+			<a class="highlight">family-owned hotels</a>
+			and a growing number of 
+			<a class="highlight">bed and breakfasts</a>.
+		    </p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card">
+          <h2 class="h2-item">Quality Guarantee</h2>
+		    <p class="card-item" > All types of lodging are strictly regulated and regularly inspected by the Tanitian government.
+		    </p>
+        </div>
+	  </article>
+    </div>
+  </main>
+</div>
+
+<div class="article-wrapper">
+  <main class="main-content">
+    <div class="article-container">
+	  <article class="article-items" >
+        <div class="card">
+	      <h2 class="h2-item" >Resort Contact</h2>
+		    <p class="card-item">
+			<a class="highlight">Four-Star Resort:</a>
+			555-555-5555<br>
+			TanitiResort@email.com
+			<a class="highlight">Hostel:</a><br>
+			555-555-5554<br>
+			TanitiHostel@email.com
+			</p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card">
+          <h2 class="h2-item">Local-Lodging Contact</h2>
+		    <p class="card-item">
+			<a class="highlight">Hotels:</a><br>
+			555-555-5553<br>
+			TanitiHotels@email.com<br>
+			<a class="highlight">B-n'-B:</a><br>
+			555-555-5552<br>
+			TanitiBnB@email.com
+			</p>
+        </div>
+	  </article>
+    </div>
+  </main>
+</div>
+
+<footer id="footer-nav">
+  <div class="footer-container">
+    <div class="footer-items center-text">
+	  <div class="footer-item" >
+	    <a class="footer-span" href="index.html">
+		  Home
+		</a>
+	  </div>
+      <div class="footer-item ">
+	    <a class="footer-span active " href="stay.html">
+		  Stay
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="travel.html">
+		  Travel
+		</a>
+	  </div>
+      <div class="footer-item">
+	  	<a class="footer-span" href="eat.html">
+		  Eat
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="relax.html">
+		  Relax
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="about.html">
+		  About
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="faq.html">
+		  Faq
+		</a>
+	  </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

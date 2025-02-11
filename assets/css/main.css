@@ -16,7 +16,7 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   line-height: 1.15;
-  font-family: Lucida Sans, sans-serif;
+  font-family: Bungee Spice;
   height: 100%;
 }
 
@@ -153,8 +153,9 @@ main {
   display: flex;
   position: relative;
   line-height: 64px;
-  align-items: right;
+  align-items: end;
   text-align: right;
+
 }
 
 .nav-item {
@@ -163,7 +164,7 @@ main {
   color: rgba(252,240,214,100%);
   font-weight: bold;
   position: relative;
-  flex-direction: row;
+  width: fit-content;
 }
 
 .nav-item:hover {

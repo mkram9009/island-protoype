@@ -584,7 +584,8 @@ p.card-item {
  
  .card.card-big-travel {
   height: 300px;
-}
+  }
+  
   div.card {
 	padding: 0 20px 0 20px;
 	height: 235px;
@@ -596,7 +597,7 @@ p.card-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 25px;
+	padding-top: 10px;
     color: rgba(0, 153, 204, 100%);
 	margin: auto;
   }

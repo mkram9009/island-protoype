@@ -494,7 +494,21 @@ p.card-item {
 @media only screen and (min-width: 1400px) {
   /* For desktop: */
 
-  
+  .bookNowBtn {
+    background: rgba(255,140,105,100%);
+    color: rgba(252,240,214,100%);
+    border: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 36px;
+    cursor: pointer;
+    line-height: 45px;
+    width: 200px;
+    height: 64px;
+    box-shadow: 0 0 35px 6px rgba(252,240,214,50%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
   
   .overlay button {
 	float: left;

@@ -590,7 +590,7 @@ p.card-item {
 	padding: 0 20px 0 20px;
 	height: 235px;
 	position: relative;
-	width: 200px;
+	width: 225px;
   }
   
   .h2-item {
@@ -603,7 +603,7 @@ p.card-item {
   }
   
   p.card-item {
-	margin: 25px 0px 0px 0px;
+	margin: 15px 0px 0px 0px;
   }
   
   .footer-container {

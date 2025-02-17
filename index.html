@@ -64,9 +64,61 @@
 
 
     </script>
+  <script href="assets/scripts/detectBrowser.js" rel="javascript">
+    function whichBrowser() {
+    if (isFirefox()) {
+    return "Firefox";
+  } else if (isEdge()) {
+    return "Edge";
+  } else if (isIE()) {
+    return "Internet Explorer";
+  } else if (isOpera()) {
+    return "Opera";
+  } else if (isVivaldi()) {
+    return "Vivalid";
+  } else if (isChrome()) {
+    return "Chrome";
+  } else if (isSafari()) {
+    return "Safari";
+  } else {
+    return "Unknown";
+  }
+  }
 
-<style>
-</style>
+    function agentHas(keyword) {
+    return navigator.userAgent.toLowerCase().search(keyword.toLowerCase()) > -1;
+  }
+
+    function isIE() {
+    return !!document.documentMode;
+  }
+
+    function isSafari() {
+    return (!!window.ApplePaySetupFeature || !!window.safari) &&   agentHas("Safari") && !agentHas("Chrome") && !agentHas("CriOS");
+  }
+
+    function isChrome() {
+    return agentHas("CriOS") || agentHas("Chrome") || !!window.chrome;
+  }
+
+    function isFirefox() {
+    return agentHas("Firefox") || agentHas("FxiOS") || agentHas(  "Focus");
+  }
+
+    function isEdge() {
+    return agentHas("Edg");
+  }
+
+    function isOpera() {
+    return agentHas("OPR");
+  }
+
+    function isVivaldi() {
+    return agentHas("Vivaldi");
+  }
+  </script>
+
+
 </head>
 
 <body class="bg-image">
@@ -130,8 +182,7 @@
 	      <a class="nav-item nav-hover" href="stay.html">Stay</a>
 	      <a class="nav-item nav-hover" href="travel.html">Travel</a>
 	      <a class="nav-item nav-hover" href="eat.html">Eat</a>
-	      <a class="nav-item nav-hover" href="relax.html">Relax</a>
-	      <a class="nav-item nav-hover" href="about.html">About</a>
+	      <a class="nav-item nav-hover" href="play.html">Play</a>
 		  <a class="nav-item nav-hover " href="faq.html">Faq</a>
 	  </div>
 	</nav>
@@ -195,75 +246,33 @@
 <div class="article-wrapper">
   <main class="main-content">
     <div class="article-container">
-	<article class="article-items" >
-        <div class="card">
-	      <h2 class="h2-item" >
-		    <a class="no-line" href="stay.html">
-		      Stay a while
-		    </a>
-		  </h2>
-		    <p class="card-item">Lodging options include: an inexpensive 
-			<a class="">hostel</a>,a
-			four-star 
-			<a class="">resort</a>,
-			family-owned 
-			<a class="">hotels</a>,
-			<a class="">bed & breakfasts</a>.
+	  <article class="article-items" >
+        <div class="card card-big-about2">
+	      <h2 class="h2-item">Island Topography</h2>
+		    <p class="card-item">Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied and includes both sandy and rocky 
+			<a class="highlight">beaches</a>,
+			a small but 
+			<a class="highlight">safe harbor</a>,
+			lush 
+			<a class="highlight">tropical rainforests</a>, and a mountainous interior that includes a small, 
+			<a class="highlight">active volcano</a>.
 			</p>
         </div>
-	    </a>
-	</article>
-	<article class="article-items">
-        <div class="card">
-          <h2 class="h2-item">
-		    <a class="no-line" href="travel.html">
-			  Get around
-		    </a>
-		  </h2>
-		    <p class="card-item" >Arrive by a small 
-			<a class="">airplane</a> or by a small
-			<a class="">cruise ship</a>. Explore the island while riding public
-			<a class="">buses</a>, local 
-			<a class="">taxis</a>, 
-			<a class="">rental cars</a>, or 
-			<a class="">bicycles</a>.
-			</p>
-       </div>
-	  </a>
-	</article>
-	<article class="article-items">
-        <div class="card">
-          <h2 class="h2-item">
-		    <a class="no-line" href="eat.html">
-			  Try our food
-		    </a>
-		  </h2>
-		    <p class="card-item">Enjoy the taste of 
-			<a class="">Pan-Asian cuisine</a>, restaurants serving local <a class="">fish & rice</a>, 
-			or meals served 
-			<a class="">American-style</a>.
-			</p>
+	  </article>
+	  <article class="article-items">
+        <div class="card card-big-about2">
+          <h2 class="h2-item">Population</h2>
+		    <p class="card-item" >Taniti has an indigenous population of about 20,000.
+		  </p>
         </div>
-	  </a>
-	</article>
-	<article class="article-items">
-        <div class="card">
-          <h2 class="h2-item">
-		    <a class="no-line" href="relax.html">
-			  Have fun
-		    </a>
-		  </h2>
-		    <p class="card-item">Go on a hike through a lush 
-			<a class="">rainforest</a> or an exotic 
-			<a class="">volcano</a>. Relax with various island 
-			<a class="">tours</a> or enjoy the island life while
-			<a class="">snorkeling</a>, 
-			<a class="">dancing</a>, to taking 
-			<a class="">helicopter rides</a>.
-			</p>
+	  </article>
+	  <article class="article-items">
+        <div class="card card-big-about2">
+          <h2 class="h2-item">Economy</h2>
+		    <p class="card-item" >Until a recent increase in tourism, most the Tanitian economy was dominated by fishing or agriculture.
+		  </p>
         </div>
-	  </a>
-	</article>
+	  </article>
     </div>
   </main>
 </div>
@@ -293,13 +302,8 @@
 		</a>
 	  </div>
       <div class="footer-item">
-	    <a class="footer-span" href="relax.html">
-		  Relax
-		</a>
-	  </div>
-      <div class="footer-item">
-	    <a class="footer-span" href="about.html">
-		  About
+	    <a class="footer-span" href="play.html">
+		  Play
 		</a>
 	  </div>
       <div class="footer-item">

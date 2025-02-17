@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/main.css" type="text/css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script href="assets/scripts/search.js" rel="javascript"> 
+    function openSearch() {
+      document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function closeSearch() {
+      document.getElementById("myOverlay").style.display = "none";
+    }
+  </script>
+  <script href="assets/scripts/booking.js" rel="javascript">
+  	function openBooking() {
+      document.getElementById("bookingOverlay").style.display = "block";
+    }
+
+    function closeBooking() {
+      document.getElementById("bookingOverlay").style.display = "none";
+    }
+	</script>
+    <script href="assets/scripts/detectBrowser.js" rel="javascript">
+    function whichBrowser() {
+    if (isFirefox()) {
+    return "Firefox";
+  } else if (isEdge()) {
+    return "Edge";
+  } else if (isIE()) {
+    return "Internet Explorer";
+  } else if (isOpera()) {
+    return "Opera";
+  } else if (isVivaldi()) {
+    return "Vivalid";
+  } else if (isChrome()) {
+    return "Chrome";
+  } else if (isSafari()) {
+    return "Safari";
+  } else {
+    return "Unknown";
+  }
+  }
+
+    function agentHas(keyword) {
+    return navigator.userAgent.toLowerCase().search(keyword.toLowerCase()) > -1;
+  }
+
+    function isIE() {
+    return !!document.documentMode;
+  }
+
+    function isSafari() {
+    return (!!window.ApplePaySetupFeature || !!window.safari) &&   agentHas("Safari") && !agentHas("Chrome") && !agentHas("CriOS");
+  }
+
+    function isChrome() {
+    return agentHas("CriOS") || agentHas("Chrome") || !!window.chrome;
+  }
+
+    function isFirefox() {
+    return agentHas("Firefox") || agentHas("FxiOS") || agentHas(  "Focus");
+  }
+
+    function isEdge() {
+    return agentHas("Edg");
+  }
+
+    function isOpera() {
+    return agentHas("OPR");
+  }
+
+    function isVivaldi() {
+    return agentHas("Vivaldi");
+  }
+  </script>
+<style>
+</style>
+</head>
+
+<body class="bg-image">
+<div class="body-wrapper">
+<div class="nav-main-wrapper">
+
+<div class="nav-wrapper">
+<ul class="tool-nav">
+  
+  <li class="home-tool ">
+    <div>
+	  <button class="search-icon" type="submit" onclick="openSearch()"><i title="Search Button Icon" class="fa fa-search" style="font-size:20px"></i>
+	  </button>
+	  <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+        <div class="overlay-content">
+          <form class="form-content" action="action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+	    </div>
+	  </div>
+	</div>
+  </li>
+
+  <li class="plane-tool plane-icon">
+    <div>
+	  <a>
+	    <i class="fa fa-plane" style="font-size:24px"></i>
+	  </a>
+	</div>
+  </li>
+  
+  <li class="map-tool map-icon">
+    <div>
+	  <a>
+	  <i class="fa fa-map-o" style="font-size:18px"></i>
+	  </a>
+	</div>
+  </li>
+  
+  <li class="home-tool">
+    <div>
+	  <a class="home-icon" href="index.html">
+	  <i class="fa fa-home" style="font-size:26px"></i>
+	  </a>
+	</div>
+  </li>
+  
+</ul>
+
+
+<header class="header-nav">
+  <div class="header-container">
+    <div class="logo-container">
+	  <a href="index.html">
+	    <img class ="img-active" src="assets/images/taniti-logo2.png" title="Taniti Island Logo">
+	  </a>
+	</div>
+	<nav class="main-nav-items">
+	  <div class="top-nav">
+	      <a class="nav-item nav-hover" href="stay.html">Stay</a>
+	      <a class="nav-item nav-hover" href="travel.html">Travel</a>
+	      <a class="nav-item nav-hover" href="eat.html">Eat</a>
+	      <a class="nav-item active" href="play.html">Play</a>
+	      <a class="nav-item nav-hover " href="faq.html">Faq</a>
+	  </div>
+	</nav>
+  </div>
+</header>
+</div>
+
+<div class="book-container">
+  <button class="bookNowBtn" type="submit" onclick="openBooking()">
+    Book Now
+  </button>
+  
+  <div id="bookingOverlay" class="bookingOverlay">
+    <span class="closebtn" onclick="closeBooking()" title="Close Overlay">x</span>
+      <div class="bookingOverlay-content">
+
+  <form id="booking-form">
+    <h2>Taniti Lodging Form</h2>
+	
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+	
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+	  <label for="email">Confirm Email:</label>
+      <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+	  <label for="phone">Confirm Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+	  
+    <label for="guests">Number of Guests:</label>
+    <input type="number" id="guests" name="guests" min="1" required>
+
+    <label for="room-type">Lodging Type:</label>
+    <select id="room-type" name="lodging-type" required>
+      <option value="" selected>Select Your Lodging</option>
+      <option value="resort">Four-Star Resort</option>
+      <option value="hostel">Hostel</option>
+      <option value="hotel">Hotel</option>
+	  <option value="b-n-b">Bread & Breakfast</option>
+    </select>
+
+	 <label for="arrival-date">Arrival Date:</label>
+    <input type="date" id="arrival-date" name="arrival-date" required>
+
+    <label for="departure-date">Departure Date:</label>
+    <input type="date" id="departure-date" name="departure-date" required>
+
+    <button type="submit">Book Now</button>
+  </form>
+  
+  </div>
+  </div>
+</div>
+
+<div class="article-wrapper">
+  <main class="main-content">
+    <div class="article-container">
+	  <article class="article-items" >
+        <div class="card card-big-relax">
+	      <h2 class="h2-item">Popular Activities</h2>
+		    <p class="card-item">Most people visit Taniti to enjoy the 
+			<a class="highlight">beaches</a>, explore the 
+			<a class="highlight">rainforest</a>, and to visit the 
+			<a class="highlight">volcano</a>.
+			</p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card card-big-relax">
+          <h2 class="h2-item">Island Activities</h2>
+		    <p class="card-item" >However, there are other things to do, including visiting a local 
+			<a class="highlight">history museum</a>, going on 
+			<a class="highlight">chartered fishing</a> tours, 
+			<a class="highlight">snorkeling</a>, 
+			<a class="highlight">zip-lining</a> in the rainforest, visiting several 
+			<a class="highlight">pubs</a>, including a 
+			<a class="highlight">microbrewery</a>, dancing at a new 
+			<a class="highlight">dance club</a>, seeing a 
+			<a class="highlight">movie</a>, taking 
+			<a class="highlight">helicopter rides</a>, playing at an 
+			<a class="highlight">arcade</a>, visiting 
+			<a class="highlight">art galleries</a>, and 
+			<a class="highlight">bowling</a>.
+			</p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card card-big-relax">
+          <h2 class="h2-item">Merriton Landing</h2>
+		    <p class="card-item" >Also, a 
+			<a class="highlight">nine-hole golf course</a>
+			should be operational by next year. Many of these activities are located in 
+			<a class="highlight">Merriton Landing</a>
+			, which is a rapidly developing area on the north side of Yellow Leaf Bay.
+			</p>
+        </div>
+	  </article>
+	  <article class="article-items">
+        <div class="card card-big-relax">
+          <h2 class="h2-item">Sightseeing</h2>
+		    <p class="card-item" >Most tourists spend most of their time in Taniti City, which boasts 
+			<a class="highlight">native architecture</a> and nearby white, sandy 
+			<a class="highlight">beaches</a> that encircle Yellow Leaf Bay. Other popular activities include 
+			<a class="highlight">boat or bus tours</a>
+			of the island, hikes in the 
+			<a class="highlight">rainforest</a>, or visits to Taniti’s active <a class="highlight">volcano</a>.
+			</p>
+        </div>
+	  </article>
+    </div>
+  </main>
+</div>
+
+<footer id="footer-nav">
+  <div class="footer-container">
+    <div class="footer-items center-text">
+	  <div class="footer-item" >
+	    <a class="footer-span" href="index.html">
+		  Home
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="stay.html">
+		  Stay
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span " href="travel.html">
+		  Travel
+		</a>
+	  </div>
+      <div class="footer-item">
+	  	<a class="footer-span " href="eat.html">
+		  Eat
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span active" href="play.html">
+		  Play
+		</a>
+	  </div>
+      <div class="footer-item">
+	    <a class="footer-span" href="faq.html">
+		  Faq
+		</a>
+	  </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

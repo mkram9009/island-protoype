@@ -22,6 +22,59 @@
       document.getElementById("bookingOverlay").style.display = "none";
     }
 	</script>
+  <script href="assets/scripts/detectBrowser.js" rel="javascript">
+    function whichBrowser() {
+    if (isFirefox()) {
+    return "Firefox";
+  } else if (isEdge()) {
+    return "Edge";
+  } else if (isIE()) {
+    return "Internet Explorer";
+  } else if (isOpera()) {
+    return "Opera";
+  } else if (isVivaldi()) {
+    return "Vivalid";
+  } else if (isChrome()) {
+    return "Chrome";
+  } else if (isSafari()) {
+    return "Safari";
+  } else {
+    return "Unknown";
+  }
+  }
+
+    function agentHas(keyword) {
+    return navigator.userAgent.toLowerCase().search(keyword.toLowerCase()) > -1;
+  }
+
+    function isIE() {
+    return !!document.documentMode;
+  }
+
+    function isSafari() {
+    return (!!window.ApplePaySetupFeature || !!window.safari) &&   agentHas("Safari") && !agentHas("Chrome") && !agentHas("CriOS");
+  }
+
+    function isChrome() {
+    return agentHas("CriOS") || agentHas("Chrome") || !!window.chrome;
+  }
+
+    function isFirefox() {
+    return agentHas("Firefox") || agentHas("FxiOS") || agentHas(  "Focus");
+  }
+
+    function isEdge() {
+    return agentHas("Edg");
+  }
+
+    function isOpera() {
+    return agentHas("OPR");
+  }
+
+    function isVivaldi() {
+    return agentHas("Vivaldi");
+  }
+  </script>
 <style>
 </style>
 </head>
@@ -88,8 +141,7 @@
 	      <a class="nav-item nav-hover" href="stay.html">Stay</a>
 	      <a class="nav-item nav-hover" href="travel.html">Travel</a>
 	      <a class="nav-item active" href="eat.html">Eat</a>
-	      <a class="nav-item nav-hover" href="relax.html">Relax</a>
-	      <a class="nav-item nav-hover" href="about.html">About</a>
+	      <a class="nav-item nav-hover" href="play.html">Play</a>
 		  <a class="nav-item nav-hover " href="faq.html">Faq</a>
 	  </div>
 	</nav>
@@ -195,13 +247,8 @@
 		</a>
 	  </div>
       <div class="footer-item">
-	    <a class="footer-span" href="relax.html">
-		  Relax
-		</a>
-	  </div>
-      <div class="footer-item">
-	    <a class="footer-span" href="about.html">
-		  About
+	    <a class="footer-span" href="play.html">
+		  Play
 		</a>
 	  </div>
       <div class="footer-item">

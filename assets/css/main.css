@@ -16,7 +16,7 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   line-height: 1.15;
-  font-family: Bungee Spice;
+  font-family: Bungee Spice, Arial;
   height: 100%;
 }
 
@@ -44,24 +44,6 @@ main {
   display: flex;
   position: relative;
   justify-content: right;
-}
-
-.book-icon {
-  display: flex;
-  position: relative;
-  width: 64px;
-  height: 40px;
-  background-color: rgba(255,140,105,100%);
-  color: rgba(252,240,214,100);
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  text-align: center;
-  box-shadow: 0 0 35px 6px rgba(252,240,214,80%);
-  font-size: 22px;
-  margin-top: 30px;
-  padding: 10px 0px 10px 0;
-  text-decoration: none;
-  line-height: 20px;
 }
 
 .bookNowBtn {
@@ -480,8 +462,9 @@ p.card-item {
   color: rgba(146,208,80,100%);
 }
 
-
-@media only screen and (min-width: 840px) {
+/************/
+/** @MEDIA **/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* For tablets: */
   .top-nav {
     height: 64px;
@@ -489,7 +472,7 @@ p.card-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: 10px;
+	gap: 20px;
 	
   }
   
@@ -509,12 +492,24 @@ p.card-item {
   
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1024px) {
   /* For desktop: */
 
-  .book-icon {
-	box-shadow: 0 0 35px 6px rgba(252,240,214,40%);
+  .bookNowBtn {
+    background: rgba(255,140,105,100%);
+    color: rgba(252,240,214,100%);
+    border: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 36px;
+    cursor: pointer;
+    line-height: 45px;
+    width: 200px;
+    height: 64px;
+    box-shadow: 0 0 35px 6px rgba(252,240,214,50%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
+
   
   .overlay button {
 	float: left;
@@ -538,7 +533,7 @@ p.card-item {
 }
   
   .top-nav {
-        height: 64px;
+    height: 64px;
 	width: 100%;
 	display: flex;
 	position: relative;
@@ -580,34 +575,35 @@ p.card-item {
   }
   
   .card.card-big-about2 {
-	height: 350px;
+	height: 370px;
   }
   
   .card.card-big-relax {
-	height: 395px;
+	height: 425px;
   }
  
  .card.card-big-travel {
-  height: 300px;
-}
+  height: 330px;
+  }
+  
   div.card {
 	padding: 0 20px 0 20px;
 	height: 235px;
 	position: relative;
-	width: 200px;
+	width: 225px;
   }
   
   .h2-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-top: 25px;
+	padding-top: 10px;
     color: rgba(0, 153, 204, 100%);
 	margin: auto;
   }
   
   p.card-item {
-	margin: 25px 0px 0px 0px;
+	margin: 15px 0px 0px 0px;
   }
   
   .footer-container {
@@ -634,3 +630,23 @@ p.card-item {
   }
   
 }
+  
+  /***************/
+  /** Chrominum */
+  /* <!--[if Chrome]>   */
+  
+  /* div.card { */
+    /* width: 225px; */
+  /* } */
+  
+  	/* .h2-item { */
+	/* font-size: 1.25rem; */
+  /* } */
+  
+  /* p.card-item { */
+    /* font-size: 1rem; */
+	/* line-height: 1.25rem; */
+  /* } */
+  
+
+  /* <![endif]--> */

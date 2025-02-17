@@ -628,24 +628,24 @@ p.card-item {
     font-size: 1rem;
   }
   
+}
   
   /***************/
   /** Chrominum */
-  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-	div:not(*:root) {
-  }
+  /* <!--[if Chrome]>   */
   
-      div.card {
-        width: 225px;
-    }
+  /* div.card { */
+    /* width: 225px; */
+  /* } */
   
-  	.h2-item {
-	font-size: 1.25rem;
-  }
+  	/* .h2-item { */
+	/* font-size: 1.25rem; */
+  /* } */
   
-  p.card-item {
-    font-size: 1rem;
-	line-height: 1.25rem;
-}
+  /* p.card-item { */
+    /* font-size: 1rem; */
+	/* line-height: 1.25rem; */
+  /* } */
   
-}
+
+  /* <![endif]--> */

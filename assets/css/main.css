@@ -462,7 +462,8 @@ p.card-item {
   color: rgba(146,208,80,100%);
 }
 
-
+/************/
+/** @MEDIA **/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   /* For tablets: */
   .top-nav {
